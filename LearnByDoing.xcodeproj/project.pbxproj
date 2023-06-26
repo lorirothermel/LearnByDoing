@@ -17,7 +17,33 @@
 		DF3BB2022A4936700096E215 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3BB2012A4936700096E215 /* SoundPlayer.swift */; };
 		DF3BB2042A4936E50096E215 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF3BB2032A4936E50096E215 /* sound-ding.mp3 */; };
 		DF3BB2062A49373B0096E215 /* sound-chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF3BB2052A49373B0096E215 /* sound-chime.mp3 */; };
+		DF3BB20C2A4A13B00096E215 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3BB20B2A4A13B00096E215 /* Stickers.xcassets */; };
+		DF3BB2102A4A13B00096E215 /* stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DF3BB2092A4A13AE0096E215 /* stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF3BB20E2A4A13B00096E215 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF3BB1D32A4717A60096E215 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF3BB2082A4A13AE0096E215;
+			remoteInfo = stickers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF3BB2142A4A13B00096E215 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DF3BB2102A4A13B00096E215 /* stickers.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DF3BB1DB2A4717A60096E215 /* LearnByDoing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnByDoing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +58,9 @@
 		DF3BB2012A4936700096E215 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		DF3BB2032A4936E50096E215 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
 		DF3BB2052A49373B0096E215 /* sound-chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-chime.mp3"; sourceTree = "<group>"; };
+		DF3BB2092A4A13AE0096E215 /* stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3BB20B2A4A13B00096E215 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		DF3BB20D2A4A13B00096E215 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				DF3BB1DD2A4717A60096E215 /* LearnByDoing */,
+				DF3BB20A2A4A13AE0096E215 /* stickers */,
 				DF3BB1DC2A4717A60096E215 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				DF3BB1DB2A4717A60096E215 /* LearnByDoing.app */,
+				DF3BB2092A4A13AE0096E215 /* stickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +126,15 @@
 			path = Sound;
 			sourceTree = "<group>";
 		};
+		DF3BB20A2A4A13AE0096E215 /* stickers */ = {
+			isa = PBXGroup;
+			children = (
+				DF3BB20B2A4A13B00096E215 /* Stickers.xcassets */,
+				DF3BB20D2A4A13B00096E215 /* Info.plist */,
+			);
+			path = stickers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,15 +145,32 @@
 				DF3BB1D72A4717A60096E215 /* Sources */,
 				DF3BB1D82A4717A60096E215 /* Frameworks */,
 				DF3BB1D92A4717A60096E215 /* Resources */,
+				DF3BB2142A4A13B00096E215 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DF3BB20F2A4A13B00096E215 /* PBXTargetDependency */,
 			);
 			name = LearnByDoing;
 			productName = LearnByDoing;
 			productReference = DF3BB1DB2A4717A60096E215 /* LearnByDoing.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DF3BB2082A4A13AE0096E215 /* stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF3BB2112A4A13B00096E215 /* Build configuration list for PBXNativeTarget "stickers" */;
+			buildPhases = (
+				DF3BB2072A4A13AE0096E215 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = stickers;
+			productName = stickers;
+			productReference = DF3BB2092A4A13AE0096E215 /* stickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -126,6 +183,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					DF3BB1DA2A4717A60096E215 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					DF3BB2082A4A13AE0096E215 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -144,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				DF3BB1DA2A4717A60096E215 /* LearnByDoing */,
+				DF3BB2082A4A13AE0096E215 /* stickers */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +218,14 @@
 				DF3BB2062A49373B0096E215 /* sound-chime.mp3 in Resources */,
 				DF3BB1E32A4717A80096E215 /* Assets.xcassets in Resources */,
 				DF3BB2042A4936E50096E215 /* sound-ding.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3BB2072A4A13AE0096E215 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3BB20C2A4A13B00096E215 /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +246,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF3BB20F2A4A13B00096E215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF3BB2082A4A13AE0096E215 /* stickers */;
+			targetProxy = DF3BB20E2A4A13B00096E215 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DF3BB1E72A4717A80096E215 /* Debug */ = {
@@ -351,6 +428,44 @@
 			};
 			name = Release;
 		};
+		DF3BB2122A4A13B00096E215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSDME8QJX3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = stickers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LearnByDoing;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rothermel1.LearnByDoing.stickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF3BB2132A4A13B00096E215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CSDME8QJX3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = stickers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LearnByDoing;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rothermel1.LearnByDoing.stickers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -368,6 +483,15 @@
 			buildConfigurations = (
 				DF3BB1EA2A4717A80096E215 /* Debug */,
 				DF3BB1EB2A4717A80096E215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF3BB2112A4A13B00096E215 /* Build configuration list for PBXNativeTarget "stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3BB2122A4A13B00096E215 /* Debug */,
+				DF3BB2132A4A13B00096E215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
