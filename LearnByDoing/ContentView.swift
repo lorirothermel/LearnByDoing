@@ -8,19 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+        
+        let cards: [Card] = cardData
+        
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(alignment: .center, spacing: 20) {
+                ForEach(cards) { card in
+                    CardView(card: card)
+                }  // ForEach
+            }  // HStack
+            .padding(15)
+        }  // ScrollView
+        
         .padding()
-    }
-}
+        
+        
+    }  // some View
+}  // ContentView
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
+
+
+//    .onAppear {
+//                Thread.sleep(forTimeInterval: 3.0)
+//            }
